@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>20180510.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+<link rel="stylesheet" href="file:///c%3A/Users/m4usta13ng/vscode_settings/yzane.markdown-pdf-1.0.1/styles/custom_markdown-pdf.css" type="text/css">
+</head>
+<body>
+<h1 id="python-3-%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E8%AA%8D%E5%AE%9A%E5%9F%BA%E7%A4%8E%E8%A9%A6%E9%A8%93%E3%81%AF%E7%94%B3%E3%81%97%E8%BE%BC%E3%81%BF%E3%81%AE%E6%96%B9%E3%81%8C%E9%9B%A3%E3%81%97%E3%81%84">Python 3 エンジニア認定基礎試験は申し込みの方が難しい</h1>
+<h2 id="0%E7%9B%AE%E6%AC%A1">0.目次</h2>
+<!-- TOC -->
+<ul>
+<li><a href="#python-3">Python 3 エンジニア認定基礎試験は申し込みの方が難しい</a>
+<ul>
+<li><a href="#0">0.目次</a></li>
+<li><a href="#1python3">1.Python3エンジニア認定基礎試験とは</a>
+<ul>
+<li><a href="#11">1.1.試験対策</a>
+<ul>
+<li><a href="#111">1.1.1.出題範囲を確認する</a></li>
+<li><a href="#112">1.1.2.対策の方法</a></li>
+</ul>
+</li>
+<li><a href="#12">1.2.試験に申し込む</a>
+<ul>
+<li><a href="#121odyssey-id">1.2.1.Odyssey IDの登録</a></li>
+<li><a href="#122">1.2.2.試験会場を選ぶ</a></li>
+<li><a href="#123">1.2.3.受験時の準備</a></li>
+<li><a href="#124">1.2.4.試験後</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h2 id="1python3%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E8%AA%8D%E5%AE%9A%E5%9F%BA%E7%A4%8E%E8%A9%A6%E9%A8%93%E3%81%A8%E3%81%AF">1.Python3エンジニア認定基礎試験とは</h2>
+<p>正直いって検索してもらった方が早いと思いますが、簡単に書いてしまうと、<a href="https://www.amazon.co.jp/Python%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB-%E7%AC%AC3%E7%89%88-Guido-van-Rossum/dp/4873117534/ref=sr_1_1?ie=UTF8&amp;qid=1525954276&amp;sr=8-1&amp;keywords=python%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB">Pythonチュートリアル 第3版</a>の内容を覚えているかが問われる試験と考えてもらって問題ありません。</p>
+<p>ちなみに、<a href="https://www.amazon.co.jp/Python%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB-%E7%AC%AC3%E7%89%88-Guido-van-Rossum/dp/4873117534/ref=sr_1_1?ie=UTF8&amp;qid=1525954276&amp;sr=8-1&amp;keywords=python%E3%83%81%E3%83%A5%E3%83%BC%E3%83%88%E3%83%AA%E3%82%A2%E3%83%AB">書籍</a>を買うのはなあ、という人は<a href="https://docs.python.jp/3/tutorial/">書籍の内容と同じドキュメント</a>が公開されているので、これで代用してください。本当に同じなの？という人は、Amazonで書籍版の一部が見られるので確認してみてください。<a href="https://docs.python.jp/3/tutorial/">ドキュメント</a>の方がバージョンも新しいのでおすすめです。とはいっても人によって良し悪しは分かれると思います。</p>
+<h3 id="11%E8%A9%A6%E9%A8%93%E5%AF%BE%E7%AD%96">1.1.試験対策</h3>
+<p>どう勉強すればいいのか、ということに関して説明します。</p>
+<h4 id="111%E5%87%BA%E9%A1%8C%E7%AF%84%E5%9B%B2%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B">1.1.1.出題範囲を確認する</h4>
+<p><a href="https://www.pythonic-exam.com/exam/basic">試験概要ページ</a>に、チュートリアルの章ごとに出題数が掲載されています。本当にこの通りに出てくるので、**ページに対して出題数が少ない＝コスパが悪い章は極端な話勉強しなくても問題ありません。**40問中28問正解すればOKなので、満点を取る！など個人的な目標がない限り、割り切って対策するのがポイントです。</p>
+<h4 id="112%E5%AF%BE%E7%AD%96%E3%81%AE%E6%96%B9%E6%B3%95">1.1.2.対策の方法</h4>
+<p>多言語でも何でもプログラミングの経験がある方は、チュートリアルを読みながらインタプリタで試してみる方法がオススメです。ただ、ターミナルやコマンドプロンプトでインタプリタを使うのは使い勝手の面で微妙なので、<a href="https://code.visualstudio.com/">VScode</a>や<a href="https://atom.io/">Atom</a>などのエディタ内からインタプリタを起動することで、よりサクサク進めることが出来ると思います。</p>
+<p>VScodeでPythonをいじっていると次々と拡張機能を薦めてくるので、言われるがままインストールしていくだけで、<code>.py</code>ファイルを即実行することも出来ます。</p>
+<p>プログラミング経験がない場合は、Pythonの入門書を別に購入し最後まで進めることをオススメします。なぜチュートリアル本ではないのかというと、チュートリアル本は初心者には読みづらい点があるためです。</p>
+<p>個人的には、約1年前に何の気なしに<a href="https://www.amazon.co.jp/%E5%AE%9F%E8%B7%B5%E5%8A%9B%E3%82%92%E8%BA%AB%E3%81%AB%E3%81%A4%E3%81%91%E3%82%8B-Python%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8-%E3%82%AF%E3%82%B8%E3%83%A9%E9%A3%9B%E8%A1%8C%E6%9C%BA/dp/4839960240/ref=sr_1_1?ie=UTF8&amp;qid=1525953962&amp;sr=8-1&amp;keywords=python%E3%81%AE%E6%95%99%E7%A7%91%E6%9B%B8">実践力を身につける Pythonの教科書</a>を読んでいたので、なんとかチュートリアル本を読めましたが、やはり最初に読むのには向かないと思います。</p>
+<h3 id="12%E8%A9%A6%E9%A8%93%E3%81%AB%E7%94%B3%E3%81%97%E8%BE%BC%E3%82%80">1.2.試験に申し込む</h3>
+<h4 id="121odyssey-id%E3%81%AE%E7%99%BB%E9%8C%B2">1.2.1.Odyssey IDの登録</h4>
+<p>試験概要ページから<a href="http://cbt.odyssey-com.co.jp/pythonic-exam.html">オデッセイコミュニケーションズの試験ページ</a>に行きます。ここに記載されている受験方法に、まずはOdyssey IDを登録するよう記載があるので登録を行います。</p>
+<h4 id="122%E8%A9%A6%E9%A8%93%E4%BC%9A%E5%A0%B4%E3%82%92%E9%81%B8%E3%81%B6">1.2.2.試験会場を選ぶ</h4>
+<p>その次に試験会場を選びますが、他の会場に比べ、「オデッセイテスティングセンター」の各会場がおススメです。試験運営を行っているオデッセイテスティングセンターの直営であることから、申し込みできる日程が多く、<a href="http://otc.odyssey-com.co.jp/process2.html">申し込みから受験までの流れ</a>のページの通りに進めていくことで簡単に申し込みが終わります。</p>
+<p>非直営会場の申し込みは直接問い合わせる必要があるのに比べると大きな差があることは間違いありません。</p>
+<h4 id="123%E5%8F%97%E9%A8%93%E6%99%82%E3%81%AE%E6%BA%96%E5%82%99">1.2.3.受験時の準備</h4>
+<p>私はオデッセイテスティングセンターで受験しましたが、受験前に受験票がメールで届きます。印刷する必要がなく、Odyssey IDとパスワードを覚えていれば問題ありません。</p>
+<p>荷物はロッカーの中にしまうよう指示されます。試験まではロビーで待機し、試験直前にPCの前に案内されます。</p>
+<p>試験はブラウザを操作することで進めていく形式で、後でもう一回確認したい問題にはチェックをし、全問を解き終わった後に再確認することが出来ます。</p>
+<p>試験問題は、<a href="https://diver.diveintocode.jp/exam">DIVE TO EXAM Python3エンジニア認定基礎模擬試験 β版</a>より少し複雑になった程度、と考えてもらって構いません。制限時間になる前に終わった場合は「試験終了」のボタンを押し、その場で結果を確認してから途中退席することが出来ます。</p>
+<h4 id="124%E8%A9%A6%E9%A8%93%E5%BE%8C">1.2.4.試験後</h4>
+<p>試験後は、受付で試験結果のプリントを受け取ることが出来ます（合格証明書ではありません）。このプリントと同内容のPDFを、<a href="http://cbt.odyssey-com.co.jp/">Odyssey CBT</a>でダウンロードすることも出来ます。</p>
+<p>正式な合格通知？は試験後1か月ほどで郵送されるとのことでした。</p>
+
+</body>
+</html>

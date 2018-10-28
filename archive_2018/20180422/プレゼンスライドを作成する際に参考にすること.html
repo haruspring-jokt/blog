@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>プレゼンスライドを作成する際に参考にすること.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: 'Noto Sans Japanese', '源真ゴシックP', "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: "Migu 2M", Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+body {
+    font-family: 'Noto Sans Japanese', '源真ゴシックP', -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, 'Yu Gothic', Verdana, Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+
+code {
+    font-family: 'Migu 2M', -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, 'Yu Gothic', Verdana, Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+
+pre {
+    background-color: #f8f8f8;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+    padding: 23px;
+    line-height: 19px;
+}
+
+blockquote {
+    background: rgba(127, 127, 127, 0.1);
+    border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+    height: 1.4em;
+}
+
+/* for inline code */
+
+:not(pre):not(.hljs)>code {
+    color: #C9AE75;
+    /* Change the old color so it seems less like an error */
+    font-size: inherit;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+body {
+    font-family: 'Noto Sans Japanese', '源真ゴシックP', -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, 'Yu Gothic', Verdana, Meiryo, "ＭＳ ゴシック", sans-serif;
+    font-size: 14px;
+}
+
+code {
+    font-family: 'Migu 2M', -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, 'Yu Gothic', Verdana, Meiryo, "ＭＳ ゴシック", sans-serif;
+    font-size: 12px;
+}
+
+pre {
+    background-color: #f8f8f8;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+    padding: 23px;
+    line-height: 19px;
+}
+
+blockquote {
+    background: rgba(127, 127, 127, 0.1);
+    border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+    height: 1.4em;
+}
+
+/* for inline code */
+
+:not(pre):not(.hljs)>code {
+    color: #C9AE75;
+    /* Change the old color so it seems less like an error */
+    font-size: inherit;
+}
+</style>
+
+</head>
+<body>
+<h1 id="%E7%9B%AE%E6%AC%A1">目次</h1>
+<!-- TOC -->
+<ul>
+<li><a href="#">目次</a></li>
+<li><a href="#">概要</a></li>
+<li><a href="#">本題</a>
+<ul>
+<li><a href="#">書籍</a>
+<ul>
+<li><a href="#zen">プレゼンテーションZen</a></li>
+<li><a href="#">ノンデザイナーズ・デザインブック</a></li>
+</ul>
+</li>
+<li><a href="#web">Webページ</a>
+<ul>
+<li><a href="#">見やすいプレゼン資料の作り方</a></li>
+</ul>
+</li>
+<li><a href="#">素材</a>
+<ul>
+<li><a href="#">写真</a></li>
+<li><a href="#">アイコン</a></li>
+<li><a href="#">カラースケール</a></li>
+<li><a href="#">その他</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<!-- /TOC -->
+<h1 id="%E6%A6%82%E8%A6%81">概要</h1>
+<p>こんにちは。</p>
+<p>この記事は色んな場所に共有するために作成したものです。また、プレゼンの参考と言う表題にしてはいますが、そこまで画期的なところは書いていません。むしろ、セオリーとしてこれが抜けてない？というツッコミを受けかねない内容ですが、私自身がここまでで参考にして使っているものを挙げていますので、ご了承ください。</p>
+<h1 id="%E6%9C%AC%E9%A1%8C">本題</h1>
+<h2 id="%E6%9B%B8%E7%B1%8D">書籍</h2>
+<p>書籍としては、色々読んだとは思いますが、実際に頭に残っているのはこの2点です。</p>
+<h3 id="%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3zen">プレゼンテーションZen</h3>
+<p><a href="https://www.amazon.co.jp/%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3ZEN-%E7%AC%AC2%E7%89%88-Garr-Reynolds/dp/462106603X/ref=sr_1_1?ie=UTF8&amp;qid=1524397022&amp;sr=8-1&amp;keywords=%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E3%83%86%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3Zen">プレゼンテーションZen 第2版 - Amazon</a></p>
+<p>プレゼンの考え方、なぜプレゼンをするのか、プレゼンをすることで何を達成すべきなのか、という「そもそも」の部分から始まります。スライドに関しては、最初からパワポを作ろうとせずまずは手書きから始めることや、とにかくシンプルにすること、1つのスライドにメッセージを1つに収めることなどが紹介されています。</p>
+<p>このように、概念の整理から実践的テクニック、サンプルスライドとオールインワンといっていい内容です。ごちゃごちゃと沢山書かれたスライドや、そのまま音読すれば成立するスライドにモヤモヤしている方に合うかもしれません。</p>
+<p>作者のブログも載せておきます。</p>
+<p><a href="http://www.presentationzen.com/">Prezentation Zen</a></p>
+<h3 id="%E3%83%8E%E3%83%B3%E3%83%87%E3%82%B6%E3%82%A4%E3%83%8A%E3%83%BC%E3%82%BA%E3%83%BB%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%96%E3%83%83%E3%82%AF">ノンデザイナーズ・デザインブック</h3>
+<p><a href="https://www.amazon.co.jp/%E3%83%8E%E3%83%B3%E3%83%87%E3%82%B6%E3%82%A4%E3%83%8A%E3%83%BC%E3%82%BA%E3%83%BB%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%96%E3%83%83%E3%82%AF-%E7%AC%AC4%E7%89%88-Robin-Williams/dp/4839955557/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1524397671&amp;sr=1-1&amp;keywords=%E3%83%8E%E3%83%B3%E3%83%87%E3%82%B6%E3%82%A4%E3%83%8A%E3%83%BC%E3%82%BA+%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%96%E3%83%83%E3%82%AF">ノンデザイナーズ・デザインブック [第4版]</a></p>
+<p>スライドに限りませんが、名前の通り、デザイナーではない人のためのデザインの考え方を紹介した書籍です。1つ1つのトピックが具体例とともに紹介されているので、だらだら見るだけでも効果があるような造りになっています。すべてのテクニックを網羅せずとも、2個3個のみ拾い上げておけば大幅に改善されるはずです。とはいっても、私もなかなか意識づけられていませんが・・・</p>
+<h2 id="web%E3%83%9A%E3%83%BC%E3%82%B8">Webページ</h2>
+<h3 id="%E8%A6%8B%E3%82%84%E3%81%99%E3%81%84%E3%83%97%E3%83%AC%E3%82%BC%E3%83%B3%E8%B3%87%E6%96%99%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9">見やすいプレゼン資料の作り方</h3>
+<p><a href="https://www.slideshare.net/yutamorishige50/ss-41321443">見やすいプレゼン資料の作り方 - SlideShare</a></p>
+<p><img src="https://image.slidesharecdn.com/how-to-present-better-remaked-141109130915-conversion-gate01/95/-1-638.jpg?cb=1457004823," alt="画像" title="画像"></p>
+<p>プレゼン資料の作り方について、スライド形式で紹介されています。「プレゼンテーションZen」は若干エモーショナルな（<a href="https://www.ted.com/talks?language=ja">TED</a>っぽい）方向性ですが、こちらはもっとカタめの場面において使える内容になっています。<strong>フォントの部分でメイリオを推していることに関しては賛同できかねますが・・・</strong>（とはいっても、フォントに関しては自由に選べない＆作成端末とプレゼン端末が異なる場合があるので、妥協点としてはアリだと思います）。</p>
+<p>なお、書籍版も出ているみたいです。内容はそこまで変わらないと思いますが、Kindle Unlimited読み放題の対象となっています。</p>
+<p><a href="https://www.amazon.co.jp/%E4%B8%80%E7%94%9F%E4%BD%BF%E3%81%88%E3%82%8B%E8%A6%8B%E3%82%84%E3%81%99%E3%81%84%E8%B3%87%E6%96%99%E3%81%AE%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E5%85%A5%E9%96%80-%E6%A3%AE%E9%87%8D%E6%B9%A7%E5%A4%AA-ebook/dp/B01AT266XS/ref=tmm_kin_swatch_0?_encoding=UTF8&amp;qid=1524397928&amp;sr=1-1">一生使える見やすい資料のデザイン入門 Kindle版</a></p>
+<h2 id="%E7%B4%A0%E6%9D%90">素材</h2>
+<p>どういう素材を選ぶかは大事だと思います。どういう基準で選ぶかというと、個人的には以下を気を付ければ良いのではないかと思います。</p>
+<ul>
+<li>（画像の場合）高画質であること</li>
+<li>素材が主張し過ぎていないこと</li>
+<li>統一性があること</li>
+<li>著作権に引っかからないこと</li>
+<li><strong>手の内が見えないこと</strong></li>
+</ul>
+<p>最後に挙げた「<strong>手の内が見えないこと</strong>」に関しては、自己顕示欲によるものかも知れませんが、聴き手がスライドを見た際に、「これはこうしてああして作ったんだな」と思わせないことが大事だと考えています。</p>
+<p>たとえば、素材サイトでも有名な「いらすとや」「ぱくたそ」などは、今やだれが見ても出典が分かってしまう状態になっています。こうして手の内が分かってしまうと、聴き手が内容よりも「手の内」が気になってしまう可能性があるので、避けた方がいいのでは、ということです。もちろん、「ぱくたそ」であっても、背景用の風景写真など、あまり「ぱくたそっぽさ」が出ていないものをチョイスすればよいでしょう。</p>
+<h3 id="%E5%86%99%E7%9C%9F">写真</h3>
+<p>海外の素材サイトなどを利用すると楽に集まります。自分がよく使うサイトを1つ2つ持っておけば問題ないでしょう。</p>
+<p>著作権などの利用方法が海外サイトだと心配、という場合は、クリエイティブコモンズの扱いがどのようになっているかを確認するようにしてください。以下におススメを貼っておきます。</p>
+<p><a href="https://www.pexels.com/">PEXELS</a></p>
+<p><a href="https://photos.icons8.com/">Moose</a></p>
+<h3 id="%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3">アイコン</h3>
+<p>文字数を減らしてシンプルなスライドを作成したい場合は、アイコンを利用します。アイコンを配布しているサイトも沢山ありますが、統一感を持たせるために出来るだけ1つのサイトですべてをまかなう必要があります。</p>
+<p><a href="https://iconmonstr.com/">iconmonstr</a></p>
+<p><a href="https://www.flaticon.com/">flaticon</a></p>
+<p><a href="https://glyphsearch.com/">glyphsearch</a></p>
+<h3 id="%E3%82%AB%E3%83%A9%E3%83%BC%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%AB">カラースケール</h3>
+<p>配色に関しても、自分で考えない＆スライド作成ソフトの標準の色を使わないことがオススメです。理由としては、配色をバラバラにすると統一感がでず、どの部分が重要な部分なのか色から判断がしづらくなること、標準の色はデザインとしてみた際にチカチカすることが多いことが挙げられます。</p>
+<p>どういうものを選んだらいいか分からない場合は、カラースケール決定をアシストしてくれるようなサイトの力を借りることをお勧めします。</p>
+<p><a href="http://webcolourdata.com/">webcolourdata</a></p>
+<p>↑有名サイトのカラースケールを割合付きで紹介しています。どのサイトも使用している色数は少ないことが分かります。</p>
+<p><a href="https://www.materialpalette.com/">material palette</a></p>
+<p>↑二色を選択すると、カラーの組み合わせ方とパレットが出現します。パレットをクリックするだけでカラーコードがコピーできます。</p>
+<p><a href="https://coolors.co/">Coolors</a></p>
+<p>↑5色のカラースケールを簡単に作ることが出来ます。Exploreモードで他のユーザによって作成されているものを使うことも出来ます。</p>
+<h3 id="%E3%81%9D%E3%81%AE%E4%BB%96">その他</h3>
+<p><a href="http://yajidesign.com/">やじるしデザイン</a></p>
+<p>↑大手町駅の工事現場で使われているのを見たことがあります。</p>
+<p><a href="http://fukidesign.com/">フキダシデザイン</a></p>
+<p><a href="https://www.flopdesign.com/">フロップデザイン</a></p>
+<p>↑ニュートラルなフォントから変わり種までがそろっています。</p>
+<p><a href="https://compressor.io/">compressor.io</a></p>
+<p>↑画像ファイルの質を落とさずに、劇的に要領を圧縮します。</p>
+<p><a href="http://tsutawarudesign.com/">伝わるデザイン - 研究発表のユニバーサルデザイン</a></p>
+<p>↑私はそこまで読み込めていませんが、こちらも作成の際に参考になると思われます。ユニバーサルデザインにも対応。</p>
+
+</body>
+</html>

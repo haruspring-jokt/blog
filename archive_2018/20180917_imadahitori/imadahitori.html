@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>imadahitori.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Cica, Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: "Noto Sans Japanese", "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+<link rel="stylesheet" href="file:///c%3A/Users/81902/vscode_settings/yzane.markdown-pdf-1.0.1/styles/custom_markdown-pdf.css" type="text/css">
+</head>
+<body>
+<h3 id="%E3%81%8A%E3%81%93%E3%81%A8%E3%82%8F%E3%82%8A">おことわり</h3>
+<p>最近のことを雑に書きます。</p>
+<h3 id="%E7%BF%92%E6%85%A3">習慣</h3>
+<p>ブログに書くという作業がなかなか習慣づかない。たくさん文章を書いていたころは何を持って書くに至っていたのか、ということを考えてしまう。有力なのは、単に暇だったということになる。あとは、仕事を始めて、（コードよりも）文章を書く機会が圧倒的に増えたことが原因だと思う。本当の好き者では無いから、じゃあ仕事じゃないときもどんどん書こう、とはならない。継続するにはいろんな力が必要だが、何より自分に合っているか、ということが重要になるが、文章を書くことは少なくともバチッと合ってはいない。嫌いでは無いという程度。</p>
+<p>さらに言えば、自分の書く文章がちゃんとしたものなのか、ということを気にしてしまうようになったことも原因に加えることができる。仕事においては勿論気にしなくてはいけないが、好きでやっているブログに関してはそこまで怖がる必要はないのではないだろうか、と一方で思うが、やはり誰がどんな目線を持っているかは分からない。ビビっているといえばそうなる。はてブを使う機会が増え、やたらコメントに文章の旨さに関するものが目につくことも、こういう感覚に至る要因になっているかもしれない。</p>
+<p>なんとか文章を書こう、ということで、なんでもないことを書いてみる。最近足りなかったのは（他人にとって）意味のないことを書くという気持ちだ。</p>
+<h3 id="1%E5%B9%B4">1年</h3>
+<p>この前は父親の命日だった。命日が決まったのは1年前のことである。</p>
+<p>親戚の繋がりがたくさんあるわけではないので、これやあれやという儀式は特には行わず、1ヶ月半に1度、実質的に地元の美容室に通うこととセットとなっている墓参りと同じことをしたくらいだった。本当に特別なこともなく一人暮らしの家に帰ってきたので、まあ、これが我が家の在り方だよなと完結させた。面倒臭さと恥ずかしさがないまぜになった結果こうなった、ということは思い出の中にも多く散りばめられている。それが良い悪いの話ではない。</p>
+<p>父のこともそうだが、人がこの世界から離れてからどこに行くのか、ということをやはり考えてしまう。この問題はどう答えをひねり出そうとしても自分がそうならないと正解が分からない問題であり、もしかしたら自分が居なくなったとしてもまだ分からないかもしれない問題でもある。だから、これについて考えることは、歴史の中で不可解なことを解決するために人々が妖怪やこの世のものでない何かによる現象に原因や因果関係を預けてきたように、自分を納得させるための手段となる。</p>
+<p>ちなみに、としておくが、私は、天国とか地獄とか言われているものは相対的なものであって、天国にはそこから見た天国と地獄（が<strong>ここ</strong>にあたる）があり、さらに天国には、といったように再現がなく縦軸が伸びているものとして、ならば、横軸にも世界が際限なく伸びていて、自ずと斜め方向にも世界が存在することになり……という風に考え、そして、宇宙だけでも考えればへこたれしまうようなスケールなのに、それが幾つも存在しているのか、と自分の案に打ちのめされてしまっている。辛うじて、くだらないことをしている自覚はある。</p>
+<p>そういえば、父が居なくなってから、正確に言えば入院してから、母親は一人暮らしとなった。諸々の事情で実家である母の住まいは変わることになり、実家は解体工事が進んでいる途中で（地元住民に面倒を与えているらしい）、兄弟も含めて家族は全員一人暮らしをしているということに、分かっていたけど改めて気づいた。</p>
+<p>そして、誰かが誰かと同じ家に住むことになるという進展の匂いは誰にも感じないので、しばらくはこの状態が続くのだと思う。最近、私は一人暮らし以上に一人で生きているなあ、と感じているが、家族それぞれはどのようなことを考えて、どのように一人を受け入れているのか、ということを勝手に想像してしまった。結局何も分からなかった。私がいつも日帰りなことに対して母は何か不満を持っているのか、ということも考えたが、いつの間にか流れていたラジオ番組が終わっただけだった。まったく覚えていないから最初から聴こう、と思わないくらいには耳に入っていた。有楽町でもどこでも、春日さんは脱がなくてはいけないのである。そして、私は若林さんほど父のことを考えていただろうか、ということを考えざるを得ない。</p>
+<h3 id="%E6%9C%AA%E3%81%A0%E4%B8%80%E4%BA%BA">未だ一人</h3>
+<p>私が一人ということを、最近になって考え込むことが多くなった。</p>
+<p>事実としては私は結構な時間一人であると言える。</p>
+<p>大学2年生から一人暮らしを始めたので、もう5年以上が経っていることになる。交際が無いのもそれに近い期間になる。うつになり、社会に出るための覚悟みたいなものとして家族以外ほぼすべての連絡先、アカウント、様々な記録やつながりを削除してからは2年か3年だろうか。簡単に挙げただけでも、色々な一人の意味があるが、一人だなあと感じ始めたのは、前述の通り最近、半年くらいのことだろうと思う。</p>
+<p>一人という感覚に至るのに、何がトリガーになったのだろうか。同世代の人間や世代にかかわらず共通の感覚を持った人に会いづらくなったこと（といっても、中学高校のときからそんなもんだと思う）、仕事におけるステップアップに関してキーとなる人物が見つかっていないこと、趣味があってもそれに関して情報や意見を交換する人間やネットワークが無いこと、予想としては色々と挙がってくる。</p>
+<p>ただ、（自分が書いている中で無意識的に避ける癖が付いているのだが）、近年の自分自身の感情や心身の健康状態に最も強く関わっているのは、先に書いたうつのことになる（ブログにも何回か書いた記憶があるが、消したこともある）。私はうつになってから1年間大学に捕えられるという耐え難い期間を経てなんとか就職することができた。正直言って過去の自分が思い描いていた図には及ばない状態ではあるものの、社会問題の現場に巻き込まれることもなく、どうにかしてピンチを避け続けているとは思う。</p>
+<p>そういう安定した1日、1週間、1ヶ月の単位を重ねていくうちに、「安定した」という表現が「淡々とした」というものに変わっていったのだと思う。なにか大きなきっかけなどはなくとも、次第に自分の中で、次の展開を望む声が大きくなってきたから、一人だなあ、つまんなくなってきたなあ、という感覚に至ったのだ。</p>
+<p>一人でなくなる方法ははっきり言って知らない。自ずから他人と関わりを持つことができる人間ではなかったので、今のような状況になって初めて、今までは世の中の制度や仕組みによって他人と知り合っていたのだということを実感することになった。そういう風に気づいたところで、では自分から輪に入り込めるような方法を探そう、ともならないことは、今度は性格の問題ということになる。根深いとはこのことだ。</p>
+<p>これを書いたあともしばらくは一人だろう。未だ一人。</p>
+<h3 id="%E5%BE%8C%E3%82%8D%E5%90%91%E3%81%8D">後ろ向き</h3>
+<p>一人でいると、（世の中的にだいたいそうなのかは分からないし、他人といてもそうかもしれないが）昔のことを考える時間が長くなる。丁度、何もすることがなかったので読み終わった漫画をもう一回初めから読んでいた小中学生の自分と同じようなことをしている。あのとき、あまりにも読んでしまったせいで付録コーナーのこともすっかり覚えてしまったように、メインストリームには決して乗らないような変な記憶も引っ張り出すようになって来た。</p>
+<p>近いところで言うと大学にいたときのことになる。ブログにも書いていたが、大半は（うつから復帰するために）消してしまったことを思い出す。些細なことから始まり、どうして自分がうつになったのかということを無理やりにでも結論づけようとする。しかし、健康的な状態の自分自身は、結論を書くことが良くないことだと知っている。複合的な原因により至って、時間が経ったからそうでなくなった、それだけのことだとしたほうが、過去に縛られたり足を取られたりすることなく、前向きにあり続けられることを知っている。が、私はいつも健康ではないから、どうしても瘡蓋（かさぶた）を剥がそうとしてしまう。</p>
+<p>大学祭でひとり背負い込もうとしたからか、ネット配信に耽るうちに陰々滅々としたコミュニティの空気にやられてしまったからか、一人暮らしと不規則なアルバイトでバランスを崩したからか、学生団体の活動で何度も都心に行くことに向いていなかったからか、アクティブな学生と上辺だけでしか会話できていなかったからか、心中の分からないサークルの人々と最後まで通じ合わなかったからか、家の掃除を怠っていたからか、高校の同窓会を断って以降誰とも連絡を取れなくなったからか、成人式やその夜の空気感に無力感を感じたからなのか、自分が2軍的な人間であるから楽しく騒いではいけないのだと痛めつけすぎてしまったからなのか、授業料と偏差値だけで大学を決めたからなのか、どこかの世界の何かの本にこうなることが書いてあったからなのか。実は、自分がその本にそうなりますとサインをしたのか。</p>
+<p>少しずつ自分の痛い部分を確かめるが、本当に痛くなる前にやめてその日を終わりにする。そんな日々が積み重ねてみれば相当に奇妙な物体になってしまったようだ。甘いことを書いているのは承知である。解決策を必要としている訳ではないが、救済は欲しがっているかもしれない。このようにして自分のことを嫌になるまでのサイクルは洗練されている。</p>
+<h3 id="%E3%81%8A%E3%82%8F%E3%82%8A">おわり</h3>
+<p>箇条書きではなく文を連ねることは確かに訓練になると思う。普段はわかりやすく箇条書きを意識しているが、書く方も読む方もわかったつもりになっているだけかもしれない。</p>
+
+</body>
+</html>
