@@ -32,7 +32,7 @@
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/bJGvLLEZQAA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-vaperwaveというジャンルにハマり始めました。説明するのが難しいので調べてみてください。
+vaporwaveというジャンルにハマり始めました。説明するのが難しいので調べてみてください。
 
 ### 1.2.2. ADAM AT
 
@@ -46,7 +46,7 @@ vaperwaveというジャンルにハマり始めました。説明するのが�
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OMn2jsUd4IY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-（説明が間違っていなければ）vaperwaveから派生したfuture funkというジャンルです。
+（説明が間違っていなければ）vaporwaveから派生したfuture funkというジャンルです。
 
 ### 1.2.4. AnTgry
 
@@ -114,7 +114,7 @@ T-SQUAREから始まってフュージョンも好きになりつつあります
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2JQkvycKnhQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-vaperwave。曲のタイトルからして世界観がわかる。
+vaporwave。曲のタイトルからして世界観がわかる。
 
 ### 1.2.13. Desired
 
@@ -138,7 +138,7 @@ future funk。ジャケットやMVで堂々と日本のアニメGIFを用いる�
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hB6AHhNLBqk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-vaperwave。
+vaporwave。
 
 ### 1.2.16. I am Robot And Proud
 
@@ -154,7 +154,7 @@ vaperwave。
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pd-uSm8ittU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-vaperwave
+vaporwave
 
 ### 1.2.18. JYOCHO
 
@@ -178,7 +178,7 @@ vaperwave
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VyXg-lp2N_g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-vaperwave。クタクタに加工されているのが印象的。
+vaporwave。クタクタに加工されているのが印象的。
 
 ### 1.2.21. MACROSS 82-99
 
@@ -274,7 +274,7 @@ future funk。
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BTTmx-Wbjsk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-vaperwave。全角アルファベットを使うのは一つの表現方法のようです。海外からは日本の全角アルファベットが不思議なものとして見られているのだと思います。まあ今も使われているのですが。
+vaporwave。全角アルファベットを使うのは一つの表現方法のようです。海外からは日本の全角アルファベットが不思議なものとして見られているのだと思います。まあ今も使われているのですが。
 
 ### 1.2.33. TANUKI
 
@@ -292,13 +292,13 @@ future funk。恐ろしいくらいの再生回数を誇るyoutubeの曲は、�
 
 インストゥルメンタルバンド。
 
-### 1.2.35. VAPERROR
+### 1.2.35. VAPORROR
 
 <iframe src="https://open.spotify.com/embed/artist/0AEVuiJFczDd4dkmZh2Kha" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/loOBSpVywYA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-vaperwave。
+vaporwave。
 
 ### 1.2.36. Elephant Gym
 
@@ -314,7 +314,7 @@ vaperwave。
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Da9EI9UG13o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-vaperwave。その名の通り日本のちょっと前のテレビが元ネタになっている。
+vaporwave。その名の通り日本のちょっと前のテレビが元ネタになっている。
 
 ### 1.2.38. にゃんぞぬデシ
 
@@ -386,7 +386,7 @@ vaperwave。その名の通り日本のちょっと前のテレビが元ネタ�
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kovd7OzcU9s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-vaperwave。特にショッピングモールを元ネタにした楽曲が多い？
+vaporwave。特にショッピングモールを元ネタにした楽曲が多い？
 
 ### 1.2.47. 豊平区民 Toyohirakumin
 
@@ -394,7 +394,7 @@ vaperwave。特にショッピングモールを元ネタにした楽曲が多�
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VAR7JBexhsM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-vaperwave。
+vaporwave。
 
 ### 1.2.48. 蓮沼執太
 
