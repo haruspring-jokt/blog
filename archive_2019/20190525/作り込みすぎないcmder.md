@@ -32,9 +32,13 @@ https://cmder.net/
 
 #### HackGenのダウンロード
 
-Powerline対応フォントは参考リンクに記載がありますが。つい最近できた「HackGen」というフォントも対応しているので、今回はそちらを使います。記事作成時点でバージョン0.4.0がリリースされていますが、「HackGen Console for Powerline」というフォントが同梱されているので、これを使うことで対応OKとなります。
+Powerline対応フォントは参考リンクに記載がありますが。つい最近できた「HackGen」というフォントも対応しているので、今回はそちらを使います。記事作成時点でバージョン0.5.0がリリースされていますが、「HackGen Console for Powerline」というフォントが同梱されているので、これを使うことで対応OKとなります。
 
 https://github.com/yuru7/HackGen/releases
+
+#### 追記：HackGenバージョンとCmder対応について
+
+**2019-05-31 現在、HackGenはv0.6.3がリリースされていますが、これをCmderに使用するときれいに表示されない現象が（少なくとも私の環境で）発生しています。v0.5.0は動作を確認しています。**
 
 zipをダウロードしたら解凍して中身のフォントファイルをインストールすればOKです。
 
@@ -48,7 +52,7 @@ zipをダウロードしたら解凍して中身のフォントファイルを�
 
 任意のフォルダで以下のコマンドを叩き、取得したプロジェクトの`.lua`ファイルを、cmderのconfigディレクトリ以下にコピーします。
 
-```
+```sh
 git clone https://github.com/AmrEldib/cmder-powerline-prompt
 ```
 
@@ -62,11 +66,13 @@ git clone https://github.com/AmrEldib/cmder-powerline-prompt
 
 デフォルトではcmderをインストールしたフォルダから起動しますが、面倒なのでホームディレクトリで起動するよう変更します。
 
-`Startuo > Tasks`の左画面から`{cmd::Cmder}`を選び、右下のテキストエリアに以下のように入力します。
+`Startup > Tasks`の左画面から`{cmd::Cmder}`を選び、右下のテキストエリアに以下のように入力します。
 
-```
+```sh
 -new_console:d:C:\Users\{ユーザー名} cmd /k ""%ConEmuDir%\..\init.bat" -new_console:d: %USERPROFILE% "
 ```
+
+または、各タスク設定画面の`Startup dir...`ボタンからも選択することができます。
 
 うまくホームディレクトリから開始しない場合は申し訳ないですが参考リンクを調べてみてください。
 
@@ -81,7 +87,7 @@ cmderインストールフォルダの`config\powerline_core.lua`のだいたい
     plc_prompt_lambSymbol = "$"
 ```
 
-ただ、私の場合はこれだけでは変更が適用されなかったので、`vendor/clink.lua`にも同様の変更をしてください。だいたい50行目くらいにあります。
+ただ、私の場合はこれだけでは変更が適用されなかったので、`vendor/clink.lua`にも同様の変更をしてください。だいたい50行目くらいにあります。すでに変更適用されていた場合は実施不要です。
 
 ```lua
     -- local lambda = "λ"
@@ -93,8 +99,9 @@ cmderインストールフォルダの`config\powerline_core.lua`のだいたい
 デフォルトだとコマンド入力はプロンプトの次の行になりますが、これを同じ行に入力できるよう変更します。`config\powerline_core.lua`のだいたい100行目を変更します。
 
 ```lua
-    -- local lambda = "λ"
-    local lambda = "$"
+-- Symbols
+-- newLineSymbol = "\n"
+newLineSymbol = ""
 ```
 
 ### Powerline強化の設定は飛ばす
