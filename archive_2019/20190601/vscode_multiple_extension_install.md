@@ -104,3 +104,9 @@ code --install-extension chrmarti.regex ^
 - 会社や開発現場のマシンと同期していいかはルールに従い判断する必要あり
 
 といったところでしょうか。利用は自己責任となりますが、拡張機能だけでなく設定も同期することができるのでかなり便利です。一度トークンを設定すればいずれかのマシンで変更するたびに残りのマシンにも同期してくれるようにもなります。
+
+## 参考
+
+[VS Codeのコマンドラインオプション：拡張機能編：Visual Studio Code TIPS - ＠IT](https://www.atmarkit.co.jp/ait/articles/1812/28/news037.html)
+
+[VSCode(Visual Studio Code)の設定を同期させる拡張機能「Setting Sync」が便利 | カレリエ](https://www.karelie.net/vscode-setting-sync/)
