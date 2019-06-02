@@ -1,0 +1,116 @@
+/* <system section="theme" selected="8599973812282600018"> */
+@import "https://blog.hatena.ne.jp/-/theme/8599973812282600018.css";
+/* </system> */
+
+/* <system section="background" selected="f4e4e4"> */
+body {
+  background: #f4e4e4;
+}
+/* </system> */
+
+html,
+body {
+  font-family: "Noto Sans", "Noto Sans CJK JP", "Helvetica Neue", "Helvetica",
+    "Arial", "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+}
+
+#footer-inner {
+  text-align: center;
+}
+
+.entry-content pre {
+  white-space: pre;
+  overflow: auto;
+}
+
+.entry-title {
+  border: solid 2px #364e96; /*線色*/
+  padding: 0.2em; /*文字周りの余白*/
+  border-radius: 0.2em; /*角丸*/
+  font-size: 130%;
+}
+
+.entry-content h2 {
+  color: #0a0a03;
+  font-size: 120%;
+  padding: 0.2em 0 0.2em 0.2em;
+  border-bottom: solid 2px #012677;
+}
+
+.entry-content h3 {
+  color: #0a0a03;
+  font-size: 110%;
+  border-left: solid #012677 5px;
+  padding: 0.2em 0 0.2em 0.5em;
+}
+
+.entry-content h4 {
+  position: relative;
+  padding-left: 1em;
+  font-size: 100%;
+}
+
+.entry-content h4::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: solid 2px #012677;
+  border-radius: 100%;
+  font-size: 100%;
+  color: #0a0a03;
+}
+
+.entry-header-menu {
+  display: none;
+}
+
+.entry-inner {
+  padding: 1em !important;
+}
+
+.keyword {
+  text-decoration: none !important;
+}
+
+/* #blog-title, #main, .ontitle-menu {
+  box-sizing:border-box;
+  width: 900px;
+} */
+
+#box2 {
+  margin-top: 34px;
+  width: calc(300px + 2rem);
+}
+
+#blog-title-inner {
+  vertical-align: middle;
+  text-align: center;
+  width: 100%;
+  background-size: cover;
+}
+
+#blog-title {
+  width: 100%;
+  margin: 0;
+}
+
+#title {
+  font-family: serif;
+}
+
+#main {
+  width: 960px;
+}
+
+#container {
+  padding-top: 0;
+}
+
+pre.code {
+  font-size: 90%;
+  font-family: monospace;
+}
