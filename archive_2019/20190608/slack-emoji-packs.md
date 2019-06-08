@@ -41,8 +41,8 @@ Path or URL of Emoji yaml file: https://raw.githubusercontent.com/lambtron/emoji
 Starting import
 Got tokens
 Logged in
-Uh oh! Error: Login error: could not get emoji upload crumb for https://harukawatips.slack.com
-(node:41512) UnhandledPromiseRejectionWarning: Error: Login error: could not get emoji upload crumb for https://harukawatips.slack.com
+Uh oh! Error: Login error: could not get emoji upload crumb for https://hogehogetips.slack.com
+(node:41512) UnhandledPromiseRejectionWarning: Error: Login error: could not get emoji upload crumb for https://hogehogetips.slack.com
     at Slack.emoji (C:\Users\XXXXX\AppData\Roaming\npm\node_modules\emojipacks\lib\slack.js:162:34)
     at Slack.emoji.next (<anonymous>)
     at onFulfilled (C:\Users\XXXXX\AppData\Roaming\npm\node_modules\emojipacks\node_modules\co\index.js:65:19)
@@ -63,7 +63,7 @@ Uh oh! Error: Login error: could not get emoji upload crumb for https://harukawa
 $ npm i -g slack-emoji-import
 slack-emoji-import path/to/emoji-pack.yaml
 
-$ slack-emoji-import C:\Users\81902\Downloads\emojipacks\packs\twitch.yaml
+$ slack-emoji-import C:\Users\XXXXX\Downloads\emojipacks\packs\twitch.yaml
 prompt: Slack Host:  hogehoge
 prompt: Slack login email:  hogehoge@gmail.com
 prompt: Slack password:
