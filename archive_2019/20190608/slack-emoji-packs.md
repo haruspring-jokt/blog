@@ -2,11 +2,13 @@
 
 ## 概要
 
+![](img/2019-06-08-16-54-12.png)
+
 Slackへのカスタム絵文字追加作業って面倒だな－と思っていたので、前から気になっていた一括登録ツールを利用してみました。そうしたところ、ちょっとしたエラーが出て回り道することになったので共有します。
 
 ## 環境
 
-node環境が必要です。
+node環境が必要です。windowsであれば公式サイトからインストールすればそのまま使えます。
 
 ```
 Windows 10 Home
@@ -53,10 +55,12 @@ Uh oh! Error: Login error: could not get emoji upload crumb for https://harukawa
 
 ### emoji-importのインストール
 
-代替手段としてemoji-importというツールを利用すると良いという情報がemojipacksのissueに書かれていたので、以下をインストール＆実行します。
+代替手段としてemoji-importというツールを利用すると良いという情報が[emojipacksのissue](https://github.com/lambtron/emojipacks/issues/158)に書かれていたので、以下をインストール＆実行します。
+
+参考： https://github.com/itslenny/slack-emoji-import
 
 ```
-npm i -g slack-emoji-import
+$ npm i -g slack-emoji-import
 slack-emoji-import path/to/emoji-pack.yaml
 
 $ slack-emoji-import C:\Users\81902\Downloads\emojipacks\packs\twitch.yaml
@@ -66,7 +70,7 @@ prompt: Slack password:
 prompt: Show browser:  (false) true
 ```
 
-上記のように、プロンプトにしたがって追加対象のワークスペース、ログイン情報を入力すればあとはpuppeteerという自動ブラウジングしてくれる方がせっせと追加してくれるみたいです。`prompt: Show browser:`を`true`にするとその様子が見られます。愛らしいですが基本`false`でOKです。
+上記のように、プロンプトにしたがって追加対象のワークスペース、ログイン情報を入力すればあとはpuppeteerという自動ブラウジングしてくれる方がせっせと追加してくれるみたいです。`prompt: Show browser:`を`true`にするとその様子が見られます。せっせと動くさまはとっても愛らしいのですが、そういう趣味がない大多数の人は基本`false`でOKです。
 
 ### 追加するemoji情報について
 
@@ -74,4 +78,14 @@ prompt: Show browser:  (false) true
 
 もちろん、自分でyamlを作ることもできます。yamlの構造はシンプルなのでそこまで難しい作業ではありません（面倒だけど）。
 
+たとえば、[emojipacksのリポジトリ内](https://github.com/lambtron/emojipacks/tree/master/packs)にもサンプルが保存されているので、これを利用することもできます。ローカルにダウンロードする必要はなく、raw表示したURLを指定すればOKです。
 
+## 注意点
+
+当たり前ですが、ログインに使うユーザーがemoji登録権限を持っている必要があります。その他、各Slackワークスペースのマナー・ルールに従いemojiを登録しましょう。
+
+また、emoji-importを使ってもログインに失敗することがあるので、その際は`prompt: Show browser:`を`true`にして、ブラウジングのどこで止まっているかを見てみると良いと思います。私の場合、ログインボタンを押す手前で止まってしまっていたので、ここを手動で押下してあげるとあとはいつも通り動いてくれました。
+
+## 参考
+
+[Slackに絵文字をバルクアップロードする方法 - Qiita](https://qiita.com/nafu/items/67ea3c3829e4efc8a100)
