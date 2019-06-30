@@ -2,6 +2,8 @@
 
 ## 概要
 
+![サムネイル用](https://images.pexels.com/photos/1647905/pexels-photo-1647905.jpeg?cs=srgb&dl=adults-colleagues-desk-1647905.jpg&fm=jpg)
+
 後輩の成長と自分の接し方やコミュニケーションのとり方を見直す機会がほしいと思い、ふりかえりを始めてみることにした。
 
 ## 背景
