@@ -28,6 +28,10 @@
 - Slack Appの作成
 - コーディング
 
+簡単な構成図。
+
+![](https://imgur.com/0Gk9v2V.jpeg)
+
 ### API GatewayとかLambdaのセッティング
 
 #### Lambdaの作成
