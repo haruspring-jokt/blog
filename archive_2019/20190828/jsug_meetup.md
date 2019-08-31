@@ -4,13 +4,23 @@ https://jsug.doorkeeper.jp/events/95750
 
 Springの初心者向け勉強会。私も初心者から脱せていない（とりあえず動くから使ってる感じ）
 
+[Spring Framework / Spring Bootに入門する人はまずこの資料を読もう！ #jsug - Qiita](https://qiita.com/suke_masa/items/9dd3300c3190d6445ff8)
+
 ## コンテナから紐解く本当のSpring入門
+
+[コンテナから紐解く本当のSpring入門](https://speakerdeck.com/masatoshitada/understanding-spring-container)
+
+発表の途中からはいったのであまり内容を聞けていない
 
 DIにはだいたい3種類、おすすめはコンストラクタインジェクション（唯一`Hoge`（`@Component`を付与しているクラス）を変更不能にできる）
 
-個人的にフィールドインジェクションをよく見るが、おすすめはコンストラクタインジェクション
+個人的にフィールドインジェクションをよく見るが、おすすめはコンストラクタインジェクションらしい。このへんの違いがあまりわかってないので押さえておきたい。
 
 ## 図解で学ぶSpring MVC
+
+初歩的な内容。新人や後輩に読んでおいてほしい
+
+[図解で学ぶSpring MVC](https://speakerdeck.com/otty375/architecture-of-spring-mvc)
 
 フロントコントローラパターンとはいわゆるController層によって各サービス層にディスパッチするパターン。コントローラーを見ればリクエスト一覧が分かるので一元管理できるのがメリット
 
@@ -42,6 +52,8 @@ Spring BootでSpring MVCを使うためには（最低限の実装）
 - i18n
 
 ## Form認証で学ぶSpring Security入門
+
+[Form認証で学ぶSpring Security入門](https://www.slideshare.net/RyosukeUchitate/formspring-security)
 
 Security Filter Chainの登録順序が分かるクラス…TODO
 
@@ -77,6 +89,8 @@ Roleの階層化をすることで細かい権限設定がスマートに書け�
 
 ## 開発者のためのSpring Boot Actuator入門
 
+[開発者のためのSpring Boot Actuator入門](https://speakerdeck.com/rshindo/jsug-2019-08)
+
 実行中のSpring Bootアプリケーションの情報を取得する（メトリクス、環境情報、ヘルスチェックなど）。取得するためのエンドポイントを用意してくれる。監視（Micrometerとの統合もできる）やデバッグに使えるなー今の現場で使ってみましょうかね
 
 今回は開発に関しての内容に絞る。
@@ -97,5 +111,8 @@ Actuatorが持つエンドポイントはそれぞれ公開するか非公開に
 
 curlを打つのが面倒な場合、Spring Boot Adminというツールを使うと楽かもしれないとのこと。Actuatorを利用してメトリクスのダッシュボードを作ってくれる。ありがたい
 
-Spring Pet Clinic…Springが作っているサンプルアプリ
+Spring Pet Clinic…Springが作っているサンプルアプリ。知らなかった
 
+## 感想
+
+初心者向けということで一応1年以上触っている身として何が得られるのか楽しみだったが、やはり知らないことや知識として押さえていない部分、とりあえず動かせるけどわかっていない部分がとても多いことを痛感した。もっと内部的な動きを理解したうえでSpringと仲良くなりたい。
