@@ -3,15 +3,11 @@
 /* </system> */
 
 /* <system section="background" selected="f4e4e4"> */
-body {
-  background: #f4e4e4;
-}
+body{background:#f4e4e4;}
 /* </system> */
 
-html,
-body {
-  font-family: "Noto Sans", "Noto Sans CJK JP", "Helvetica Neue", "Helvetica",
-    "Arial", "Hiragino Kaku Gothic Pro", "Meiryo", sans-serif;
+html, body {
+  font-family:"Noto Sans", "Noto Sans CJK JP", 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic Pro', 'Meiryo', sans-serif
 }
 
 #footer-inner {
@@ -24,9 +20,9 @@ body {
 }
 
 .entry-title {
-  border: solid 2px #364e96; /*線色*/
-  padding: 0.2em; /*文字周りの余白*/
-  border-radius: 0.2em; /*角丸*/
+  border: solid 2px #364e96;/*線色*/
+  padding: 0.2em;/*文字周りの余白*/
+  border-radius: 0.2em;/*角丸*/
   font-size: 130%;
 }
 
@@ -39,9 +35,9 @@ body {
 
 .entry-content h3 {
   color: #0a0a03;
-  font-size: 110%;
-  border-left: solid #012677 5px;
-  padding: 0.2em 0 0.2em 0.5em;
+    font-size: 110%;
+    border-left: solid #012677 5px;
+    padding: 0.2em 0 0.2em 0.5em;
 }
 
 .entry-content h4 {
@@ -51,21 +47,26 @@ body {
 }
 
 .entry-content h4::after {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  content: "";
-  width: 10px;
-  height: 10px;
-  border: solid 2px #012677;
-  border-radius: 100%;
-  font-size: 100%;
-  color: #0a0a03;
+    position: absolute;
+    top: 50%;
+    left:0;
+    transform:translateY(-50%);
+    content: '';
+    width: 10px;
+    height:10px;
+    border: solid 2px #012677;
+    border-radius:100%;
+    font-size: 100%;
+    color: #0a0a03;
+}
+
+.entry-content code {
+  font-family: monospace;
+  font-size: 120%;
 }
 
 .entry-header-menu {
-  display: none;
+  display:none;
 }
 
 .entry-inner {
@@ -83,8 +84,9 @@ body {
 
 #box2 {
   margin-top: 34px;
-  width: calc(300px + 2rem);
+  width: calc(250px + 2rem);
 }
+
 
 #blog-title-inner {
   vertical-align: middle;
@@ -103,14 +105,14 @@ body {
 }
 
 #main {
-  width: 960px;
+  width: 720px;
 }
 
 #container {
-  padding-top: 0;
+  padding-top: 0
 }
 
 pre.code {
-  font-size: 90%;
+  font-size: 110%;
   font-family: monospace;
 }
